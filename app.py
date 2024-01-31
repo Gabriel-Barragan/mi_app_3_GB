@@ -28,7 +28,7 @@ with tabs[0]:
 with tabs[1]:
   st.write('Visualization of data')
 
-  column = st.selectbox("Columns:", list(Data.columns))
+  column = st.selectbox("Variable:", list(Data.columns))
   
   hist_values = np.histogram(
     Data[column])[0]
