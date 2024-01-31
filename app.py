@@ -21,7 +21,7 @@ tabs = st.tabs(tab_titles)
 with tabs[0]:
 
   if st.checkbox('Show first observations:'):
-    st.subheader('First ', 5,'observation')
+    st.subheader('First observations')
     st.write(Data.head(5))
   
   if st.checkbox('Show raw data'):
