@@ -45,6 +45,9 @@ with tabs[1]:
   # Display the plot in Streamlit
   st.pyplot(plt)
 
+  plt.boxplot(Data[column])
+  st.boxplot(plt)
+
 with tabs[2]:  
   fig_3 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
   st.pyplot(fig_3.fig)
