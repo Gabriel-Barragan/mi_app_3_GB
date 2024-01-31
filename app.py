@@ -3,11 +3,10 @@ import streamlit as st
 
 # Load Data
 #Data = pd.read_csv('Data/california_housing_train.csv')
-Upload_file = st.sidebar.file_uploader('Upload Data:', type =['csv'])
+Uploaded_file = st.sidebar.file_uploader('Upload Data:', type =['csv'])
 
 if Uploaded_file is not None:
   Data = pd.read_csv(Uploaded_file)
-  st.write(df)
 
 # Create app
 st.title('California Housing Data')
