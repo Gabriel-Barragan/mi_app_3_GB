@@ -48,7 +48,7 @@ with tabs[0]:
   #st.dataframe(Data_corr)
 
   heat_map_plot = sns.heatmap(Data_corr, cmap='icefire')
-  st.pyplot(heat_map_plot)
+  st.pyplot(heat_map_plot.fig)
 
 with tabs[1]:
   st.write('# Visualization of data')
