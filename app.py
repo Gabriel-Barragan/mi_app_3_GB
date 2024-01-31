@@ -26,5 +26,4 @@ with tabs[0]:
 
 with tabs[1]:
   st.write('Visualization of data')
-  plot_1 = Data.hist(column='population')
-  st.pyplot(plot_1.fig)
+
