@@ -73,7 +73,3 @@ with tabs[1]:
 with tabs[2]:  
   fig_3 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
   st.pyplot(fig_3.fig)
-
-  sns.scatterplot(data=Data, x="longitude", y="latitude", hue="population", ax=axes[0],  palette="rocket").set(
-    title = "...")
-  plt.show
