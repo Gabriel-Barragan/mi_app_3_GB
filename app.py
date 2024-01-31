@@ -28,5 +28,5 @@ with tabs[0]:
 with tabs[1]:
   st.write('Visualization of data')
   hist_values = np.histogram(
-    data['population'])[0]
+    Data['population'])[0]
   st.bar_chart(hist_values)
