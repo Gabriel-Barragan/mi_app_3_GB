@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
-import matplotlib as mpl
-import mpl.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Title
 st.title('Exploratory Data Analysis')
