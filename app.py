@@ -21,27 +21,27 @@ tabs = st.tabs(tab_titles)
 with tabs[0]:
 
   if st.checkbox('Show first observations:'):
-    st.write('#First observations',5)
+    st.write('# First observations',5)
     st.write(Data.head(5))
 
   if st.checkbox('Show last observations:'):
-    st.write('#Last observations',5)
+    st.write('# Last observations',5)
     st.write(Data.tail(5))
   
   if st.checkbox('Show raw data'):
-    st.write('#Raw data')
+    st.write('# Raw data')
     st.write(Data)
   
   # Display summary
-  st.write('#Descriptive summary:')
+  st.write('# Descriptive summary:')
   st.dataframe(Data[Data.columns.difference(["longitude", "latitude"])].describe())
 
   # Display correlation matrix
-  st.write('#Correlation matrix:')
+  st.write('# Correlation matrix:')
   st.dataframe(Data[Data.columns.difference(["longitude", "latitude"])].corr())
 
 with tabs[1]:
-  st.write('#Visualization of data')
+  st.write('# Visualization of data')
 
   column = st.selectbox("Variable:", list(Data[Data.columns.difference(["longitude", "latitude"])].columns))
 
