@@ -31,6 +31,10 @@ with tabs[0]:
   if st.checkbox('Show raw data'):
     st.write('# Raw data')
     st.write(Data)
+
+  if st.check('Show missing data'):
+    st.write('# Missing data')
+    st.write(Data.isnull().sum())
   
   # Display summary
   st.write('# Descriptive summary:')
