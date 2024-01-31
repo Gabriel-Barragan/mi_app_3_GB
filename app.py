@@ -26,4 +26,5 @@ with tabs[0]:
 
 with tabs[1]:
   st.write('Visualization of data')
+  st.line_chart(Data['population'])
 
