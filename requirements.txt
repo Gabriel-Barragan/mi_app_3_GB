@@ -1,3 +1,5 @@
 pandas
 streamlit
 seaborn
+numpy
+matplotlib==3.4.3
