@@ -15,7 +15,7 @@ Data = pd.read_csv('Data/california_housing_train.csv')
 #if Uploaded_file is not None:
 #  Data = pd.read_csv(Uploaded_file)
 
-tab_titles = ['Data summary','Graphics']
+tab_titles = ['Data summary','Graphics','Pairplot']
 tabs = st.tabs(tab_titles)
 
 with tabs[0]:
@@ -45,5 +45,9 @@ with tabs[1]:
   # Display the plot in Streamlit
   st.pyplot(fig_1)
 
-  fig_2 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
-  st.pyplot(fig_2.fig)
+  fig_2 = plt.boxplot(Data[Data.columns.difference(["longitude", "latitude"])])
+  st.pyplot(fig_2) 
+
+with tabs[2]:  
+  fig_3 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
+  st.pyplot(fig_3.fig)
