@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st
 
 # Title
-st.title('EDA')
-st.sidebar.write("## Data analysis :gear:")
+st.title('Exploratory Data Analysis')
+st.sidebar.write("## Data analysis :bar_chart:")
 
 # Load Data
 #Data = pd.read_csv('Data/california_housing_train.csv')
