@@ -8,15 +8,15 @@ Uploaded_file = st.sidebar.file_uploader('Upload Data:', type =['csv'])
 if Uploaded_file is not None:
   Data = pd.read_csv(Uploaded_file)
 
-# Create app
-st.title('California Housing Data')
+  # Create app
+  st.title('California Housing Data')
 
-# Display summary
-st.write('Descriptive summary:')
-st.dataframe(Data.describe())
+  # Display summary
+  st.write('Descriptive summary:')
+  st.dataframe(Data.describe())
 
-# Display correlation matrix
-st.write('Correlation matrix:')
-st.dataframe(Data.corr())
+  # Display correlation matrix
+  st.write('Correlation matrix:')
+  st.dataframe(Data.corr())
 
 
