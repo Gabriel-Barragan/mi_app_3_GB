@@ -2,10 +2,12 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Title
 st.title('Exploratory Data Analysis')
 st.sidebar.write("## Data analysis :bar_chart:")
+st.sidebar.write("Autor: Gabriel Barragán")
 
 # Load Data
 Data = pd.read_csv('Data/california_housing_train.csv')
@@ -36,9 +38,12 @@ with tabs[1]:
   column = st.selectbox("Variable:", list(Data[Data.columns.difference(["longitude", "latitude"])].columns))
 
   # Create a histogram with custom color and title
-  fig, ax = plt.subplots()
+  fig_1, ax = plt.subplots()
   plt.hist(Data[column], color='skyblue', edgecolor='black')
   plt.title('Histogram')
  
   # Display the plot in Streamlit
-  st.pyplot(fig)
+  st.pyplot(fig_1)
+
+  fig_2 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
+  st.pyplot(fig_2.fig)
