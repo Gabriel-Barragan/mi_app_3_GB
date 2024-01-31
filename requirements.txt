@@ -1,2 +1,3 @@
 pandas
 streamlit
+matplotlib==3.4.3
