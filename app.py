@@ -1,5 +1,11 @@
 import pandas as pd
 import streamlit as st
+import seaborn as sns
+
+def explore_raw_data(df):
+   st.subheader('Raw Data')
+   if st.checkbox('Show Raw Data'):
+       st.dataframe(df)
 
 # Title
 st.title('Exploratory Data Analysis')
@@ -15,6 +21,9 @@ tab_titles = ['Data summary','Graphics']
 tabs = st.tabs(tab_titles)
 
 with tabs[0]:
+  # Explore raw data
+  explore_raw_data(Data)
+  
   # Display summary
   st.write('Descriptive summary:')
   st.dataframe(Data.describe())
@@ -24,5 +33,6 @@ with tabs[0]:
   st.dataframe(Data.corr())
 
 with tabs[1]:
-  st.write('Chart')
-
+  st.write('Visualization of data')
+  plot_1 = sns.pairplot(data = Data, hue = 'Iris name', palette='Set2')
+  st.pyplot(plot_1.fig)
