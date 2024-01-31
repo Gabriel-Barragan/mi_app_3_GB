@@ -28,8 +28,8 @@ with tabs[0]:
 with tabs[1]:
   st.write('Visualization of data')
 
-  columns = st.multiselect("Columns:", list(Data.columns), ["population"])
+  column = st.selectbox("Columns:", list(Data.columns))
   
   hist_values = np.histogram(
-    Data['population'])[0]
+    Data[column])[0]
   st.bar_chart(hist_values)
