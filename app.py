@@ -1,11 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-def explore_raw_data(df):
-   st.subheader('Raw Data')
-   if st.checkbox('Show Raw Data'):
-       st.dataframe(df)
-
 # Title
 st.title('Exploratory Data Analysis')
 st.sidebar.write("## Data analysis :bar_chart:")
@@ -35,3 +30,8 @@ with tabs[1]:
   st.write('Visualization of data')
   #plot_1 = sns.pairplot(data = Data, palette='Set2')
   #st.pyplot(plot_1.fig)
+
+def explore_raw_data(df):
+   st.subheader('Raw Data')
+   if st.checkbox('Show Raw Data'):
+       st.dataframe(df)
