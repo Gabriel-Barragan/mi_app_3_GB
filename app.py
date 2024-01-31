@@ -32,7 +32,7 @@ with tabs[0]:
     st.write('# Raw data')
     st.write(Data)
 
-  if st.check('Show missing data'):
+  if st.checkbox('Show missing data'):
     st.write('# Missing data')
     st.write(Data.isnull().sum())
   
