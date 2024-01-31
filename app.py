@@ -37,8 +37,8 @@ with tabs[1]:
 
   # Create a histogram with custom color and title
   fig, ax = plt.subplots()
-  plt.hist(Data[column], bins=20, color='skyblue', edgecolor='black')
-  plt.title('My Custom Histogram')
+  plt.hist(Data[column], color='skyblue', edgecolor='black')
+  plt.title('Histogram')
  
   # Display the plot in Streamlit
   st.pyplot(fig)
