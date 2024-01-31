@@ -41,10 +41,10 @@ with tabs[1]:
   plt.subplots()
   plt.hist(Data[column], color='skyblue', edgecolor='black')
   plt.title('Histogram')
- 
   # Display the plot in Streamlit
   st.pyplot(plt)
 
+  plt.title('Boxplot')
   plt.subplots()
   plt.boxplot(Data[column])
   st.pyplot(plt)
