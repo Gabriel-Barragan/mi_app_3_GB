@@ -24,7 +24,7 @@ with tabs[0]:
   
   # Display summary
   st.write('Descriptive summary:')
-  st.dataframe(Data.describe())
+  st.dataframe(Data[Data.columns.difference(["longitude", "latitude"])].describe())
 
   # Display correlation matrix
   st.write('Correlation matrix:')
