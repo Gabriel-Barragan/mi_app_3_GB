@@ -39,14 +39,16 @@ with tabs[1]:
 
   # Create a histogram with custom color and title
   plt.subplots()
-  plt.hist(Data[column], color='skyblue', edgecolor='black')
   plt.title('Histogram')
+  plt.hist(Data[column], color='skyblue', edgecolor='black')
+  plt.xlabel(column)
   # Display the plot in Streamlit
   st.pyplot(plt)
 
   plt.subplots()
   plt.title('Boxplot')
   plt.boxplot(Data[column])
+  plt.xlabel(column)
   st.pyplot(plt)
 
 with tabs[2]:  
