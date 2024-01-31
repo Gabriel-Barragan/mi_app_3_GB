@@ -1,6 +1,10 @@
 import pandas as pd
 import streamlit as st
 
+# Title
+st.title('EDA')
+st.sidebar.write("## Data analysis :gear:")
+
 # Load Data
 #Data = pd.read_csv('Data/california_housing_train.csv')
 Uploaded_file = st.sidebar.file_uploader('Upload Data:', type =['csv'])
