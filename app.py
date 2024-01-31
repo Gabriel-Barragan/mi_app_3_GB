@@ -38,12 +38,12 @@ with tabs[1]:
   column = st.selectbox("Variable:", list(Data[Data.columns.difference(["longitude", "latitude"])].columns))
 
   # Create a histogram with custom color and title
-  fig_1, ax = plt.subplots()
+  #fig_1, ax = plt.subplots()
   plt.hist(Data[column], color='skyblue', edgecolor='black')
   plt.title('Histogram')
  
   # Display the plot in Streamlit
-  st.pyplot(fig_1)
+  st.pyplot(plt)
 
 with tabs[2]:  
   fig_3 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
