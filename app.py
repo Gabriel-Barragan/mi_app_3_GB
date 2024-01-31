@@ -34,5 +34,5 @@ with tabs[0]:
 
 with tabs[1]:
   st.write('Visualization of data')
-  plot_1 = sns.pairplot(data = Data, hue = 'Iris name', palette='Set2')
+  plot_1 = sns.pairplot(data = Data, palette='Set2')
   st.pyplot(plot_1.fig)
