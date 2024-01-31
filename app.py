@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 # Title
 st.title('Exploratory Data Analysis')
@@ -26,4 +27,5 @@ with tabs[0]:
 
 with tabs[1]:
   st.write('Visualization of data')
-
+  fig = Data.hist(column='population')
+  st.write(fig)
