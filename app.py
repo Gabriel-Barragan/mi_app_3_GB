@@ -11,9 +11,6 @@ Uploaded_file = st.sidebar.file_uploader('Upload Data:', type =['csv'])
 if Uploaded_file is not None:
   Data = pd.read_csv(Uploaded_file)
 
-  # Create app
-  st.title('Base de datos')
-
 tab_titles = ['Data summary','Graphics']
 tabs = st.tabs(tab_titles)
 
