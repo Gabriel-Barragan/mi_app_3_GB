@@ -27,6 +27,13 @@ with tabs[0]:
 
 with tabs[1]:
   st.write('Visualization of data')
+
+  columns = st.multiselect("Columns:",Data.columns)
+  filter = st.radio("Choose by:", ("inclusion","exclusion"))
+
+  if filter == "exclusion":
+    columns = [col for col in df.columns if col not in columns]
+  
   hist_values = np.histogram(
-    Data['population'])[0]
+    Data[columns])[0]
   st.bar_chart(hist_values)
