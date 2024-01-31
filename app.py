@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Title
 st.title('Exploratory Data Analysis')
@@ -33,7 +34,10 @@ with tabs[1]:
   st.write('Visualization of data')
 
   column = st.selectbox("Variable:", list(Data.columns))
-  
-  hist_values = np.histogram(
-    Data[column])[0]
-  st.bar_chart(hist_values)
+
+  # Create a histogram with custom color and title
+  plt.hist(Data[column], bins=20, color='skyblue', edgecolor='black')
+  plt.title('My Custom Histogram')
+ 
+  # Display the plot in Streamlit
+  st.pyplot()
