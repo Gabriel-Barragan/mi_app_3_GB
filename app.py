@@ -46,7 +46,7 @@ with tabs[1]:
   st.pyplot(plt)
 
   plt.boxplot(Data[column])
-  st.boxplot(plt)
+  st.pyplot(plt)
 
 with tabs[2]:  
   fig_3 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
