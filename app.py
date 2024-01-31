@@ -45,10 +45,7 @@ with tabs[0]:
   # Display correlation matrix
   st.write('# Correlation matrix:')
   Data_corr = Data[Data.columns.difference(["longitude", "latitude"])].corr()
-  #st.dataframe(Data_corr)
-
-  heat_map_plot = sns.heatmap(Data_corr, cmap='icefire')
-  st.pyplot(heat_map_plot.fig)
+  st.dataframe(Data_corr)
 
 with tabs[1]:
   st.write('# Visualization of data')
