@@ -44,7 +44,11 @@ with tabs[0]:
 
   # Display correlation matrix
   st.write('# Correlation matrix:')
-  st.dataframe(Data[Data.columns.difference(["longitude", "latitude"])].corr())
+  Data_corr = Data[Data.columns.difference(["longitude", "latitude"])].corr()
+  #st.dataframe(Data_corr)
+
+  heat_map_plot = sns.heatmap(Data_corr, cmap='icefire')
+  st.pyplot(heat_map_plot)
 
 with tabs[1]:
   st.write('# Visualization of data')
@@ -69,3 +73,7 @@ with tabs[1]:
 with tabs[2]:  
   fig_3 = sns.pairplot(Data[Data.columns.difference(["longitude", "latitude"])])
   st.pyplot(fig_3.fig)
+
+  sns.scatterplot(data=Data, x="longitude", y="latitude", hue="population", ax=axes[0],  palette="rocket").set(
+    title = "...")
+  plt.show
