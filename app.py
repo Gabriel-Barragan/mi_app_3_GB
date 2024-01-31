@@ -4,7 +4,10 @@ import streamlit as st
 # Load Data
 #Data = pd.read_csv('Data/california_housing_train.csv')
 Upload_file = st.sidebar.file_uploader('Upload Data:', type =['csv'])
-Data = pd.read_csv(Upload_file)
+
+if Uploaded_file is not None:
+  Data = pd.read_csv(Uploaded_file)
+  st.write(df)
 
 # Create app
 st.title('California Housing Data')
@@ -16,3 +19,5 @@ st.dataframe(Data.describe())
 # Display correlation matrix
 st.write('Correlation matrix:')
 st.dataframe(Data.corr())
+
+
