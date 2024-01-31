@@ -16,6 +16,10 @@ tab_titles = ['Data summary','Graphics']
 tabs = st.tabs(tab_titles)
 
 with tabs[0]:
+
+  if st.checkbox('Show raw data'):
+    st.subheader('Raw data')
+    st.write(Data)
   
   # Display summary
   st.write('Descriptive summary:')
