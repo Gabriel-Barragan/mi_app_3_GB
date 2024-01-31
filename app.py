@@ -35,6 +35,8 @@ with tabs[0]:
   if st.checkbox('Show missing data'):
     st.write('# Missing data')
     st.write(Data.isnull().sum())
+    # Display a bar chart of the missing values
+    st.bar_chart(datos.isnull().sum())
   
   # Display summary
   st.write('# Descriptive summary:')
