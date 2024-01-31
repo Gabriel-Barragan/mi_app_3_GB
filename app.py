@@ -49,6 +49,7 @@ with tabs[1]:
   plt.title('Boxplot')
   plt.boxplot(Data[column])
   plt.xlabel(column)
+  plt.set(xticklabels=[]) 
   st.pyplot(plt)
 
 with tabs[2]:  
