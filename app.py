@@ -36,7 +36,7 @@ with tabs[0]:
     st.write('# Missing data')
     st.write(Data.isnull().sum())
     # Display a bar chart of the missing values
-    st.bar_chart(datos.isnull().sum())
+    st.bar_chart(Data.isnull().sum())
   
   # Display summary
   st.write('# Descriptive summary:')
