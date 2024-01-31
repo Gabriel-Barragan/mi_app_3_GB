@@ -44,8 +44,8 @@ with tabs[1]:
   # Display the plot in Streamlit
   st.pyplot(plt)
 
-  plt.title('Boxplot')
   plt.subplots()
+  plt.title('Boxplot')
   plt.boxplot(Data[column])
   st.pyplot(plt)
 
