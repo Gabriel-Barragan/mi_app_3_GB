@@ -45,7 +45,7 @@ with tabs[0]:
   # Display correlation matrix
   st.write('# Correlation matrix:')
   Data_corr = Data[Data.columns.difference(["longitude", "latitude"])].corr()
-  st.dataframe(Data_corr)
+  #st.dataframe(Data_corr)
 
   fig, ax = plt.subplots(figsize=(10, 8))
   sns.heatmap(Data_corr, annot=True, cmap='coolwarm', center=0, ax=ax)
