@@ -47,6 +47,10 @@ with tabs[0]:
   Data_corr = Data[Data.columns.difference(["longitude", "latitude"])].corr()
   st.dataframe(Data_corr)
 
+  fig, ax = plt.subplots(figsize=(10, 8))
+  sns.heatmap(Data_corr, annot=True, cmap='coolwarm', center=0, ax=ax)
+  st.pyplot(fig)
+
 with tabs[1]:
   st.write('# Visualization of data')
 
