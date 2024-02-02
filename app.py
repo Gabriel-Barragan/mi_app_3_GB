@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import LinearRegression from sklearn.linear_model 
 
 # Title
 st.title('Exploratory Data Analysis')
